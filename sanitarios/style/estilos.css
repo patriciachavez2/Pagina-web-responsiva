@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+}
+
+/*barra navegacion*/
+.contenedor-nav {
+    position: fixed;    
+    top: 0;
+    width: 98%;
+    height: 60px;          /*alto de contenedor*/
+    font-size: 20px;
+    display: flex;             /* Activa el flexbox */
+    justify-content: space-between;  /* Distribuye los elementos a ambos extremos */
+    align-items: center;       /* Alinea verticalmente el h3 y el nav */
+    padding: 0 20px;           /* Espacio interno horizontal */
+    background-color:#F2E4D8;/*#F2D4AE#BFADA3; #F2E4D8;*/
+  
+}
+
+nav ul {
+    display: flex;             /* Hace que los <li> estén en línea */
+    list-style: none;          /* Elimina los puntos de la lista */
+    gap: 20px;                 /* Espacio entre los <li> */
+    padding: 0;
+   
+
+}
+
+nav ul li {
+    cursor: pointer;           /* Cambia el cursor al pasar sobre los <li> */
+}
+
+/*aplicado para enlaces todos*/
+a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Mantiene el color heredado del texto padre, o puedes usar otro color específico */
+  }
+
+a:hover {
+    color: #ffbd59;
+}
+
+/*seccion portada*/
+
+.uno {
+    margin-top: 0;
+}
+#inicio {
+    width: 98% ;
+    height:90% ;
+}
+
+
+
+/*texto sobre nosotros h2 */
+#sobreNosotros {
+    font-size: 35px;
+}
+
+
+/*texto sobre nostors class*/  
+.sobreNosotros {
+    font-size: 25px;
+}  
+
+/*clase hr (el contenedor)*/
+.hr {
+ 
+     background-color: #F2E4D8;
+}
+
+/*la linea hr*/
+hr {
+   border: none;            /* Quita el estilo de borde predeterminado */
+    height: 2px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+
+
+/*seccion de productos*/
+img {
+    
+    width: 300px;    /*ancho*/
+    height: 300px; /*alto*/
+    margin-top:1px;
+    border-radius: 5px;
+
+  
+}
+
+/*estilos para la clase contedorBachas y la clase contenedorSanitarios*/
+h2{
+    text-align: center;
+}
+.contenedorBachas , .contenedorSanitarios  {
+    background-color:antiquewhite;
+    display: flex; 
+    flex-wrap: wrap;      /*agregado para que se adapten los media, esto hace queflex-wrap: wrap; permite que los elementos dentro de un contenedor flex se muevan a una nueva línea si no caben en una sola fila*/           
+    justify-content: space-evenly; /*espacio entre los elementos hijos*/
+    width: 90%;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+#descripcion{
+    text-align: center;
+}
+
+footer {
+    background-color:black ;
+    color: white;
+    font-size: 15px;
+}
+
+/*estilos agregados para que quede el mismo tamaño al icono de whapp*/
+#instagram {
+    border : solid 1px fuchsia;
+    border-radius: 50px;
+}
+
+/*cuando la pantalla tenga el tamaño de entre 600px y 900px de ancho se aplicara*/
+
+@media (min-width: 600px) and (max-width: 900px) {
+  body {
+   /* background-color: blue;*/
+    font-size: 20px;
+
+  }
+ .productos{
+    flex: 1 1 calc(50% - 20px); /*flex: 1 1 calc(50% - 20px); hace que un elemento flex ocupe el 50% del ancho del contenedor, menos 20px (que puede ser el espacio entre los elementos), permitiendo que dos elementos quepan en una fila.*/
+  }
+}
+
+
+/*se aplicara estas propiedades cuando la pantalla sea de hasta 600px.*/
+@media (max-width: 600px) {
+    body {
+    /*background-color: red;*/
+    }
+    .productos {
+    flex: 1 calc(50% -20);
+    margin: auto; /* Centrar el elemento */
+    text-align: center; /* Alinear el texto dentro del producto */
+    }
+}
